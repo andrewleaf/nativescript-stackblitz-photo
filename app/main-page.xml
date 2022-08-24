@@ -4,6 +4,21 @@
     <StackLayout class="p-20">
         <Label text="Tap the button" class="h1 text-center" />
         <Button text="TAP" tap="{{ onTap }}" class="-primary" />
-        <Label text="{{ message }}" class="h2 text-center" textWrap="true" />
+        
     </StackLayout>
+    <StackLayout class="p-20">
+<TextView
+  loaded="onTextViewLoaded"
+  hint="Enter Date"
+  text="{{ viewDate }}"
+  secure="false"
+  keyboardType="datetime"
+  returnKeyType="done"
+  autocorrect="false"
+  maxLength="10"
+/>
+        </StackLayout>
+
+
+
 </Page>
