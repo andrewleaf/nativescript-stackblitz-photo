@@ -1,5 +1,9 @@
 import { Observable } from '@nativescript/core';
-import { CameraOptions, requestPermissions } from '@nativescript/camera';
+import {
+  CameraOptions,
+  requestPermissions,
+  takePicture,
+} from '@nativescript/camera';
 
 export class HelloWorldModel extends Observable {
   private _counter: number;
@@ -11,7 +15,11 @@ export class HelloWorldModel extends Observable {
 
   onTap() {
     requestPermissions().then(
-      (x) => {},
+      (x) => {
+        takePicture().then(() => {
+          console.log('picture taken');
+        });
+      },
       (e) => {}
     );
   }

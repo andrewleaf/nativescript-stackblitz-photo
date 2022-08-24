@@ -6,19 +6,6 @@
         <Button text="TAP" tap="{{ onTap }}" class="-primary" />
         
     </StackLayout>
-    <StackLayout class="p-20">
-<TextView
-  loaded="onTextViewLoaded"
-  hint="Enter Date"
-  text="{{ viewDate }}"
-  secure="false"
-  keyboardType="datetime"
-  returnKeyType="done"
-  autocorrect="false"
-  maxLength="10"
-/>
-        </StackLayout>
-
-
+   
 
 </Page>
